@@ -7,13 +7,13 @@ import PlusMinus from '../assets/icons/plus-minus.svg'
 import Plus from '../assets/icons/plus.svg'
 import Equal from '../assets/icons/equal.svg'
 
-function Buttons({ inputNum , clearInput, inputOperator, inputEqual }) {
+function Buttons({ inputNum , clearInput , inputOperator , inputEqual , percentageInput , cancelEntry  }) {
 
   return (
     <div className="w-full justify-items-center grid grid-cols-4 gap-y-[12px] gap-x-[12px] text-2xl mt-[26px]">
-        <button className="btn-black text-[#975DFA]" id="ce">CE</button>
+        <button className="btn-black text-[#975DFA]" onClick={cancelEntry}>CE</button>
         <button className="btn-black" onClick={clearInput}>C</button>
-        <button className="btn-black" id="%">
+        <button className="btn-black" onClick={percentageInput}>
           <img className='my-0 mx-auto' src={Percent} alt="" />
         </button>
         <button className="btn-purple" value="/" onClick={inputOperator}>
